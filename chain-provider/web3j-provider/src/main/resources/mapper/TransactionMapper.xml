@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chain.web3j.mapper.TransactionRecordMapper">
+
+    <insert id="addTransactionRecord">
+        INSERT INTO transaction_record
+        <trim prefix="(" suffix=")">
+            <if test="hash != null and hash != ''">
+                `hash`,
+            </if>
+            <if test="nonce != null and nonce != ''">
+                `nonce`,
+            </if>
+            <if test="blockHash != null and blockHash != ''">
+                block_hash,
+            </if>
+            <if test="blockNumber != null and blockNumber != ''">
+                block_number,
+            </if>
+            <if test="transactionIndex != null and transactionIndex != ''">
+                transaction_index,
+            </if>
+            <if test="from != null and from != ''">
+                `from`,
+            </if>
+            <if test="to != null and to != ''">
+                `to`,
+            </if>
+            <if test="value != null and value != ''">
+                `value`,
+            </if>
+            <if test="gasPrice != null and gasPrice != ''">
+                gas_price,
+            </if>
+            <if test="gas != null and gas != ''">
+                gas,
+            </if>
+            <if test="input != null and input != ''">
+                `input`,
+            </if>
+            <if test="creates != null and creates != ''">
+                creates,
+            </if>
+            <if test="publicKey != null and publicKey != ''">
+                public_key,
+            </if>
+            <if test="raw != null and raw != ''">
+                raw,
+            </if>
+            <if test="r != null and r != ''">
+                r,
+            </if>
+            <if test="s != null and s != ''">
+                s,
+            </if>
+            <if test="v != null">
+                v,
+            </if>
+            create_time
+        </trim>
+        VALUE
+        <trim prefix="(" suffix=")">
+            <if test="hash != null and hash != ''">
+                #{hash},
+            </if>
+            <if test="nonce != null and nonce != ''">
+                #{nonce},
+            </if>
+            <if test="blockHash != null and blockHash != ''">
+                #{blockHash},
+            </if>
+            <if test="blockNumber != null and blockNumber != ''">
+                #{blockNumber},
+            </if>
+            <if test="transactionIndex != null and transactionIndex != ''">
+                #{transactionIndex},
+            </if>
+            <if test="from != null and from != ''">
+                #{from},
+            </if>
+            <if test="to != null and to != ''">
+                #{to},
+            </if>
+            <if test="value != null and value != ''">
+                #{value},
+            </if>
+            <if test="gasPrice != null and gasPrice != ''">
+                #{gasPrice},
+            </if>
+            <if test="gas != null and gas != ''">
+                #{gas},
+            </if>
+            <if test="input != null and input != ''">
+                #{input},
+            </if>
+            <if test="creates != null and creates != ''">
+                #{creates},
+            </if>
+            <if test="publicKey != null and publicKey != ''">
+                #{publicKey},
+            </if>
+            <if test="raw != null and raw != ''">
+                #{raw},
+            </if>
+            <if test="r != null and r != ''">
+                #{r},
+            </if>
+            <if test="s != null and s != ''">
+                #{s},
+            </if>
+            <if test="v != null">
+                #{v},
+            </if>
+            NOW()
+        </trim>
+
+
+    </insert>
+</mapper>
