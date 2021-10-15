@@ -1,2 +1,2 @@
-# Nexus-front
-Nexus-front
+# Nexus-wallet-java
+Nexus-wallet-java
